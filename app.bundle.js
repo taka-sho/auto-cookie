@@ -143,7 +143,7 @@ var _src = __webpack_require__(0);
 
 var name = 'auto-cookie';
 
-var expires = 0;
+var expires = 1 / 48;
 (0, _src.save)(name, 'data', expires);
 console.log((0, _src.find)(name, expires));
 

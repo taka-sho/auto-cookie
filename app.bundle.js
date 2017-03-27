@@ -108,6 +108,7 @@ function findOrCreate(name, expires, data) {
     domain = domainParts[domainParts.length - i] + '.' + domain;
 
     if (data) {
+      console.log(name, data, { domain: domain, expires: expires });
       _jsCookie2.default.set(name, data, { domain: domain, expires: expires });
     }
 
@@ -117,6 +118,7 @@ function findOrCreate(name, expires, data) {
     }
   }
   if (data) {
+    console.log(name, data, { domain: domain, expires: expires });
     _jsCookie2.default.set(name, data, { domain: domain, expires: expires });
   }
   return _jsCookie2.default.get(name, { domain: location.hostname, expires: expires });
